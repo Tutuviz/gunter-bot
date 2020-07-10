@@ -1,0 +1,28 @@
+{
+	"name": "gunter-bot",
+	"version": "1.0.0",
+	"description": "Gunter, a bot from discord is coming to help you",
+	"main": "index.js",
+	"dependencies": {
+		"discord.js": "^12.2.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"eslint": "^7.4.0"
+	},
+	"scripts": {
+		"start": "nodemon -r dotenv/config index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Tutuviz/gunter-bot.git"
+	},
+	"author": "Tutuviz",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Tutuviz/gunter-bot/issues"
+	},
+	"homepage": "https://github.com/Tutuviz/gunter-bot#readme"
+}

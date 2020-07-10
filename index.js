@@ -1,14 +1,24 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.Client();
 
-client.on('ready', () => {
-	console.log(`Logged in as ${client.user.tag}!`);
+bot.on('ready', () => {
+	console.log(`Bot running and logged in as ${bot.user.tag}!`);
 });
 
-client.on('message', (msg) => {
-	if (msg.content === 'ping') {
+bot.on('message', (msg) => {
+	if (msg.content === 'ping' || msg.content === 'Ping') {
 		msg.reply('Pong!');
+	}
+	if (msg.content === 'picture') {
+		// Send the user's avatar URL
+		msg.reply(msg.author.displayAvatarURL());
+	}
+	if (msg.content === 'image') {
+		const attachment = new Discord.MessageAttachment(
+			'./img/gunter_logo.jpg',
+		);
+		msg.channel.send(attachment);
 	}
 });
 
-client.login('token');
+bot.login(process.env.DISCORD_TOKEN);
